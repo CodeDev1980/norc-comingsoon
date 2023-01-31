@@ -15,6 +15,26 @@
             background-position: center;
             background-size: cover;
         }
+        #smallScreens {
+            display: none;
+        }
+        @media(max-width:968px){
+            #bigScreens {
+                display:none;
+            }
+            #smallScreens {
+                display: block;
+                padding-top: 50px;
+            }
+        }
+        @media(max-width:868px){
+            #bigScreens {
+                display:none;
+            }
+            #smallerScreens {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -24,9 +44,16 @@
         Logo
     </div>
     <div class="w3-display-middle">
-        <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
-        <h2 class="w3-animate-left">NORC Concrete & Services for Arizona</h2>
-        <hr class="w3-border-white" style="margin:auto;width:40%">
+        <div id="bigScreens">
+            <h1 class="w3-jumbo w3-animate-top">COMING SOON</h1>
+            <h2 class="w3-animate-left">NORC Concrete & Services for Arizona</h2>
+            <hr class="w3-border-white" style="margin:auto;width:40%">
+        </div>
+        <div id="smallScreens">
+            <h1 id="smallerScreens">COMING SOON</h1>
+            <h2>NORC Concrete</h2>
+            <hr class="w3-border-white" style="margin:auto;width:40%">
+        </div>
         <div class="w3-card-4">
 
             <div class="w3-container w3-black">
@@ -49,11 +76,8 @@
             </form>
 
         </div>
-        <p class="w3-large w3-text-black w3-center">35 days left</p>
     </div>
-    <div class="w3-display-bottomleft w3-padding-large">
-        Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-    </div>
+  
 </div>
 
 </body>
